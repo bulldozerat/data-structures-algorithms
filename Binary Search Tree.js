@@ -62,7 +62,7 @@ class BinarySearchTree {
     return current;
   }
   
-    breadthFirstSearch() {
+  breadthFirstSearch() {
     const q = [this.root];
     const data = [];
 
@@ -76,7 +76,7 @@ class BinarySearchTree {
     return data;
   }
 
-  DepthFirstSearchPreOrder() {
+  depthFirstSearchPreOrder() {
     const data = [];
     function traverse(node) {
       data.push(node.value);
@@ -87,7 +87,7 @@ class BinarySearchTree {
     return data;
   }
 
-  DepthFirstSearchPostOrder() {
+  depthFirstSearchPostOrder() {
     const data = [];
     function traverse(node) {
       if (node.left) traverse(node.left);
@@ -98,7 +98,7 @@ class BinarySearchTree {
     return data;
   }
 
-  DepthFirstSearchInOrder() {
+  depthFirstSearchInOrder() {
     const data = [];
     function traverse(node) {
       if (node.left) traverse(node.left);
@@ -120,4 +120,5 @@ tree.insert(16);
 tree.insert(4);
 tree.insert(14);
 tree.find(4);
+tree.depthFirstSearchPreOrder();
 // console.log(tree);
